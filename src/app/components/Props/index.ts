@@ -1,0 +1,1 @@
+export { WelcomeProps } from './Props';
