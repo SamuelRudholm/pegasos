@@ -6,21 +6,23 @@ export const Navigation = () => {
   return (
     <AppContext.Consumer>
       {({ auth }) => {
-        if (auth) {
-          return (
-            <div className="list">
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="about">About</Link>
-                </li>
-              </ul>
-            </div>
-          );
-        }
-        return <h1>You need to sign in</h1>;
+        return (
+          <div className="list">
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="about">About</Link>
+              </li>
+              {auth ? (
+                <Link to="about">Sign out</Link>
+              ) : (
+                <Link to="about">Sign In</Link>
+              )}
+            </ul>
+          </div>
+        );
       }}
     </AppContext.Consumer>
   );
