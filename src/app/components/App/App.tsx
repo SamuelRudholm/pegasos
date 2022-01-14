@@ -1,25 +1,16 @@
-import '../../style.css';
-import { Header } from '../Header';
-import { MyComponent, Button } from '../Const';
-import { AppRouter } from '../../router/AppRouter';
-import { BrowserRouter } from 'react-router-dom';
-import { Navigation } from '../Navigation/Navigation';
-import { EffectHook, FirstUseState } from '../Usestate';
-import { WelcomeProps } from '../Props';
+import { AppRouter } from "../../router/AppRouter";
+import { Navigation } from "../Navigation/Navigation";
 
 export const App = () => {
-
-  return(
+  return (
     <div>
-      <WelcomeProps name="Samuel"/>
+      {/* Header */}
+
+      {/* <WelcomeProps name="TT" />
       <FirstUseState />
-      <EffectHook />
-      <BrowserRouter>
-        <Navigation />
-        <AppRouter />
-      </BrowserRouter>
+      <EffectHook /> */}
+      <Navigation />
+      <AppRouter />
     </div>
-
-  )
-
-}
+  );
+};
